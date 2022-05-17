@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Desafio 02</title>
+       
+
+    </head>
+    <body> 
+        <header><h1>ChronosAcademy</h1></header>
+        <section>
+            <h2>
+                Entrar via teclado com a base e a altura de um retângulo, 
+                calcular e exibir a sua área.
+            </h2>
+            <form name="desafio02">
+                <p>
+                    <label for="base">Base</label>
+                    <input type="text" name="base" id="base" />
+                </p>
+                <p>
+                    <label for="altura">Altura</label>
+                    <input type="text" name="altura" id="altura" />
+                </p>
+                <p>
+                    <input type="submit" value="Calcular" />
+                    <input type="reset" value="Limpar" />
+                </p>
+            </form>
+        </section>
+
+        <footer>
+            <h3>
+                Criado no curso Lógica de Programação Sem Complicação -HTML+JavaScript
+            </h3>
+        </footer>
+
+        <script>
+            console.log("Hello Word!");
+            const form = document.querySelector("form");
+            form.onsubmit = function (){
+                calculoArea ();
+
+            }
+            function calculoArea (){
+                let area;
+                let base = document.querySelector("#base");
+                let altura = document.querySelector("#altura");
+                area = base.value * altura.value;
+                alert("Area Toral: "+area+"m2");
+            }
+        </script>
+    </body>
+
+
+
+</html>
